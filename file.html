@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Speaking Assessment Report</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Speaking Assessment Report</h1>
+            <p>Adjust the slider to test the feedback logic</p>
+        </header>
+
+        <div class="control-panel">
+            <label>Update Overall Score (0-9): </label>
+            <input type="range" id="scoreRange" min="0" max="9" step="0.5" value="7" oninput="updateUI()">
+            <span id="scoreVal">7.0</span>
+        </div>
+
+        <div class="report-content">
+            <div class="summary-card">
+                <div class="score-display">
+                    <h3>Overall Score</h3>
+                    <div id="bigScore" class="number">7.0</div>
+                    <span>out of 9</span>
+                </div>
+                <div class="feedback-display">
+                    <h3>Descriptive Feedback</h3>
+                    <p id="feedbackText">Good performance with minor inaccuracies.</p>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h3>Skill-wise Scores</h3>
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="file.js"></script>
+</body>
+</html>
